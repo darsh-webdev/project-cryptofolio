@@ -33,7 +33,7 @@ const LineChart = ({ coinHistory, currentPrice, coinName, timePeriod }) => {
     if (timePeriod === "3h" || timePeriod === "24h") {
       coinTimestamp.push(new Date(timestamp).toLocaleString());
     } else {
-      coinTimestamp.push(new Date(timestamp).toDateString());
+      coinTimestamp.push(new Date(timestamp).toLocaleDateString());
     }
   }
 
