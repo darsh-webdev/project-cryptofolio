@@ -65,7 +65,9 @@ const Navbar = () => {
           <MenuOutlined />
         </Button>
       </div>
-      {activeMenu && <Menu theme="dark" items={menuItems}></Menu>}
+      {activeMenu && (
+        <Menu className="menu" theme="dark" items={menuItems}></Menu>
+      )}
     </div>
   );
 };

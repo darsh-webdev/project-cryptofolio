@@ -7,9 +7,9 @@ import { Loader } from "../components";
 
 const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 10 : 1000;
+  const [searchTerm, setSearchTerm] = useState("");
   const { data: cryptosList, isFetching } = useGetCryptosQuery(count);
   const [cryptos, setCryptos] = useState(cryptosList?.data?.coins);
-  const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
